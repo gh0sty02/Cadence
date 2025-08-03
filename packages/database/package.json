@@ -1,0 +1,30 @@
+{
+  "name": "@monorepo/database",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "db:generate": "prisma generate --schema=./prisma",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "build": "tsc",
+    "dev": "tsx watch --ignore '../**/*.tsx' src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.7.0"
+  },
+  "devDependencies": {
+    "@monorepo/types": "workspace:*",
+    "@monorepo/tsconfig": "workspace:*",
+    "prisma": "^6.7.0",
+    "typescript": "^5.2.0",
+    "tsx": "^4.7.0"
+  },
+  "prisma": {
+    "schema": "./prisma"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "type": "module"
+}

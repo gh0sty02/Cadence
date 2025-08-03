@@ -1,0 +1,23 @@
+{
+  "name": "@monorepo/types",
+  "author": "Ives Furtado | @ivesfurtado",
+  "version": "1.0.0",
+  "keywords": [],
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsx src/index.ts",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@monorepo/tsconfig": "workspace:*",
+    "@monorepo/eslint-config": "workspace:*",
+    "tsx": "^4.7.0"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

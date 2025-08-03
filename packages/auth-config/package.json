@@ -1,0 +1,30 @@
+{
+  "name": "@monorepo/auth-config",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsx src/index.ts",
+    "auth:generate": "npx @better-auth/cli generate --output packages/database/prisma/user.prisma --config index.ts"
+  },
+  "dependencies": {
+    "@better-auth/cli": "^1.3.4",
+    "@monorepo/database": "workspace:*",
+    "better-auth": "^1.3.4",
+    "prisma": "link:better-auth/adapters/prisma"
+  },
+  "devDependencies": {
+    "@monorepo/types": "workspace:*",
+    "@monorepo/tsconfig": "workspace:*",
+    "prisma": "^5.3.0",
+    "typescript": "^5.2.0",
+    "tsx": "^4.7.0"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "type": "module"
+}

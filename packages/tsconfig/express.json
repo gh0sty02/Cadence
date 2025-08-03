@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "ExpressJS Server",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "esnext",
+    "outDir": "dist",
+    "declaration": false,
+    "declarationMap": false,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+  }
+}
