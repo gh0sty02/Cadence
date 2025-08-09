@@ -1,0 +1,32 @@
+{
+  "name": "cadence",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "changeset": "changeset",
+    "publish:packages": "changeset publish",
+    "version:packages": "turbo build && changeset version",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "ui": "pnpm --filter @repo/ui ui",
+    "prisma:generate": "turbo run db:generate",
+    "prisma:db-sync": "turbo run db:push",
+    "auth:generate": "turbo run auth:generate"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "catalog:",
+    "turbo": "2.1.1"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20.17.0"
+  },
+  "volta": {
+    "node": "20.17.0",
+    "pnpm": "9.12.0"
+  }
+}
