@@ -21,4 +21,4 @@ export const auth: ReturnType<typeof BetterAuthType> = betterAuth({
   },
 });
 
-export { toNodeHandler, fromNodeHeaders };
+export { toNodeHandler, fromNodeHeaders, betterAuth };

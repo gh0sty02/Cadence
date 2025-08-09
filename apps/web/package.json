@@ -9,7 +9,9 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@repo/auth-config": "workspace:*",
     "@repo/ui": "workspace:*",
+    "better-auth": "^1.3.4",
     "next": "14.2.8",
     "react": "catalog:react18",
     "react-dom": "catalog:react18"
@@ -27,5 +29,6 @@
     "postcss": "^8",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
-  }
+  },
+  "type": "module"
 }
