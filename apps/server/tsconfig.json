@@ -1,7 +1,12 @@
 {
   "extends": "@repo/typescript-config/express.json",
   "compilerOptions": {
-    "outDir": "./dist"
+    "outDir": "dist",
+    "paths": {
+      "@repo/database": ["../../packages/database/src"]
+    },
+    "composite": true
   },
-  "include": ["src/**/*.ts", "eslint.config.mjs"]
+  "include": ["src/**/*.ts", "eslint.config.mjs"],
+  "references": [{ "path": "../../packages/database" }]
 }
